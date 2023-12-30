@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&display=swap');
+header h1 {
+  font-family: Cinzel;
+  font-weight: 500;
+  font-size: 3.5em;
+}
+
+header p {
+  font-size: 24px;
+  font-family: "Cormorant Garamond";
+  text-align: center;
+}
+main {
+  padding: 0 120px;
+  background-image: url("./assets/images/background_leaves.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+#aboutus {
+  padding: 75px 0px;
+}
+#aboutus .aboutus_heading {
+  border-right: 1px solid #a67449;
+  padding: 35px 0;
+}
+#aboutus .aboutus_text {
+  padding: 35px 0 35px 35px;
+}
+#aboutus .aboutus_heading > h2 {
+  font-size: 38px;
+  font-family: "Cinzel Decorative";
+  color: #a67449;
+}
+#aboutus .aboutus_text p {
+  font-size: 20px;
+  font-family: "Cormonrant Garound";
+  color: #a67449;
+}
+
+#invitations_cont {
+  border: 1px solid red;
+  padding: 30px 0;
+}
+
+#invitations_variety_cont {
+  /* border: 1px solid yellow; */
+}
+.invitescat {
+  /* border: 1px solid blue; */
+  width: fit-content;
+  padding: 12px 60px;
+  border-radius: 40px;
+  border: 2px solid #bfada3;
+
+  color: #6e4c2d;
+  text-align: center;
+  font-family: "Cormorant Garound";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-right: 10px;
+}
+#invitations_cont h2 {
+  color: #a67449;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-family: "Kaisei Decol";
+  padding:40px 0 0 0 ;
+}

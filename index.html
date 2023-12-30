@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>WedGrace Invitations</title>
-  <!--<link rel="shortcut icon" type="image/x-icon" href="https://designingtools.github.io/images/favicon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WedGrace Invitations</title>
+    <!--<link rel="shortcut icon" type="image/x-icon" href="https://designingtools.github.io/images/favicon.png">
   
   <meta charset="UTF-8">-->
-  <meta name="viewport" content="width=device-width" initial-scale=1>
-  <meta name="description" content="Discover timeless elegance with our exquisite wedding invitations and save the dates. Browse a stunning collection of customizable designs to set the perfect tone for your special day. Create unforgettable moments with our premium selection. Shop now for the finest wedding stationery that reflects your love story">
-  <meta name="keywords" content="Wedding Invitations, Wedding invitation, Wedding cards, digital wedding invitations, digital wedding card, save the date"> 
-  <meta property="og:title" content="Explore Elegant Wedding Invitations for your Big Day!">
-  <meta property="og:description" content="Discover timeless elegance with our exquisite wedding invitations and save the dates. Browse a stunning collection of customizable designs to set the perfect tone for your special day. Create unforgettable moments with our premium selection. Shop now for the finest wedding stationery that reflects your love story">
-  <!--<meta property="og:image" content="https://github.com/designingtools/designingtools.github.io/blob/main/images/canva%20template.webp">
+    <meta name="viewport" content="width=device-width" initial-scale="1" />
+    <meta
+      name="description"
+      content="Discover timeless elegance with our exquisite wedding invitations and save the dates. Browse a stunning collection of customizable designs to set the perfect tone for your special day. Create unforgettable moments with our premium selection. Shop now for the finest wedding stationery that reflects your love story"
+    />
+    <meta
+      name="keywords"
+      content="Wedding Invitations, Wedding invitation, Wedding cards, digital wedding invitations, digital wedding card, save the date"
+    />
+    <meta
+      property="og:title"
+      content="Explore Elegant Wedding Invitations for your Big Day!"
+    />
+    <meta
+      property="og:description"
+      content="Discover timeless elegance with our exquisite wedding invitations and save the dates. Browse a stunning collection of customizable designs to set the perfect tone for your special day. Create unforgettable moments with our premium selection. Shop now for the finest wedding stationery that reflects your love story"
+    />
+    <!--<meta property="og:image" content="https://github.com/designingtools/designingtools.github.io/blob/main/images/canva%20template.webp">
   <meta property="og:url" content="https://designingtools.github.io/">
 
   <meta name="twitter:title" content="Canva Menu - Essential Tools For Your Design">
@@ -22,11 +34,106 @@
 
   <meta name="google-site-verification" content="vpaEFf_AN-rHBP_FvAY2ijusnS4-VkUaggF632sFKak" />-->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <style>
+      @font-face {
+        font-family: "Cinzel";
+        src: url("./assets/fonts/Cinzel/Cinzel-VariableFont_wght.ttf");
+      }
+      @font-face {
+        font-family: "Cinzel Decorative";
+        
+        src:url("./assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf");
+      }
 
-</head>
-<body>
-  <h1>Welcome</h1>
-</body>
+      @font-face {
+        font-family: "Cormorant Garamond";
+        src: url("./assets/fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf");
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Carousel -->
+      <div
+        id="demo"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./assets/images/Group 1.png"
+              alt="Los Angeles"
+              class="d-block"
+              style="width: 100%"
+            />
+            <div class="carousel-caption">
+              <h1>WedGrace <br />INVITATIONS</h1>
+              <p>
+                Get elegant and customized invites and cards for your wedding
+                functions
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/images/Group 2.png"
+              alt="Chicago"
+              class="d-block"
+              style="width: 100%"
+            />
+            <div class="carousel-caption">
+              <h1>WedGrace <br />INVITATIONS</h1>
+              <p>
+                Get elegant and customized invites and cards for your wedding
+                functions
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="aboutus">
+        <div class="row">
+          <div class="col-sm-3 aboutus_heading d-flex justify_content-center align-items-center">
+            <h2>About Us</h2>
+          </div>
+          <div class="col-sm-9 aboutus_text d-flex justify_content-center align-items-center">
+            <p>Welcome to WedGrace Invitations, where we bring your wedding dreams to life through meticulously crafted, personalized wedding cards. Our commitment is to turn your special day into a work of art, reflecting your unique journey and celebrating your love story.</p>
+          </div>
+        </div>
+      </div>
+      <div id="invitations_cont">
+        <!-- Categories -->
+        <div id="invitations_variety_cont" class="d-flex flex-row justify-content-center align-items-center">
+          <div class="invitescat" id="invitecat_1">
+            Floral
+          </div>
+          <div class="invitescat" id="invitecat_2">
+            Traditional
+          </div>
+          <div class="invitescat" id="invitecat_3">
+            Modern
+          </div>
+        </div>
+        <!-- end -->
+        <!-- heading -->
+        <h2>Explore Elegant Invitations <br>For Your Big Day</h2>
+      </div>
+    </main>
+  </body>
 </html>
