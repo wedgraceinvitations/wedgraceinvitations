@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Kaisei+Decol:wght@700&display=swap");
 header h1 {
   font-family: Cinzel;
   font-weight: 500;
@@ -10,12 +10,23 @@ header p {
   font-family: "Cormorant Garamond";
   text-align: center;
 }
+.headerimg {
+  width: 100%;
+}
 main {
   padding: 0 120px;
   background-image: url("./assets/images/background_leaves.png");
   background-size: contain;
   background-repeat: no-repeat;
-
+}
+#wa_button {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 4;
+}
+#wa_button > img {
+  width: 60px;
 }
 #aboutus {
   padding: 75px 0px;
@@ -39,19 +50,33 @@ main {
 }
 
 #invitations_cont {
-  border: 1px solid red;
-  padding: 30px 0;
+  /* border: 1px solid red; */
+  padding: 50px 120px;
+  margin: 0 -120px;
+  background-image: url("./assets/images/hands_2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-#invitations_variety_cont {
-  /* border: 1px solid yellow; */
+.invitations_variety_cont {
+  display: flex;
 }
-.invitescat {
+.invitations_variety_cont::-webkit-scrollbar {
+  display: none;
+}
+
+.invitations_variety_cont li {
+  /* border: 1px solid yellow; */
+  display: inline !important;
+}
+button.invitescat {
   /* border: 1px solid blue; */
+  text-decoration: none;
   width: fit-content;
-  padding: 12px 60px;
+  padding: 10px 40px;
   border-radius: 40px;
   border: 2px solid #bfada3;
+  background-color: transparent;
 
   color: #6e4c2d;
   text-align: center;
@@ -61,6 +86,29 @@ main {
   font-weight: 600;
   line-height: normal;
   margin-right: 10px;
+  transition: all;
+  transition-duration: 0.5s;
+}
+button.invitescat:hover {
+  background-color: #a67449;
+  color: white;
+}
+.activetab {
+  background-color: #8a5f3a;
+  color: white;
+  border: none;
+}
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #invitations_cont h2 {
   color: #a67449;
@@ -70,5 +118,173 @@ main {
   font-weight: 700;
   line-height: normal;
   font-family: "Kaisei Decol";
-  padding:40px 0 0 0 ;
+  padding: 40px 0 0 0;
+  margin-bottom: 70px;
+}
+.invites {
+  margin-bottom: 75px;
+}
+.invites .invite_img {
+  /* border: 1px solid purple; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.invites .invite_img > img {
+  max-width: 280px;
+}
+.invites .invite_descp {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+.invites .invite_descp > h3 {
+  color: #2c1942;
+  text-align: center;
+  font-family: Lavishly Yours;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.invites .invite_descp > p {
+  color: #322766;
+  font-family: Cormorant Garamond;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px; /* 176.19% */
+}
+.invites .invite_descp > .getInviteBtn {
+  background-color: #4b487b;
+  padding: 12px 20px;
+  border: none;
+  color: white;
+}
+footer {
+  padding: 60px;
+  background-color: #202020;
+  text-align: center;
+  font-family: Cinzel;
+  font-size: 18px;
+  color: rgb(219, 219, 219);
+}
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 0 70px;
+    background-image: url("./assets/images/background_leaves.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
+
+  #aboutus .aboutus_heading > h2 {
+    font-size: 28px;
+    line-height: 48px;
+    text-align: center;
+    padding-right: 16px;
+  }
+  #aboutus .aboutus_text {
+    padding: 15px 0 15px 25px;
+  }
+  #aboutus .aboutus_text p {
+    font-size: 17px;
+    max-width: 90%;
+  }
+  #invitations_cont {
+    padding: 50px 35px;
+    margin: 0 -70px;
+  }
+  .invitations_variety_cont {
+    padding: 0px 35px;
+    overflow-x:scroll;
+  }
+  button.invitescat {
+    /* border: 1px solid blue; */
+
+    padding: 6px 20px;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: 10px;
+  }
+  .invites .invite_img > img {
+    margin-bottom: 25px;
+  }
+  .invites .invite_descp > h3 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  main {
+    padding: 0px 35px;
+    background-image: url(./assets/images/background_leaves.png),
+      url(./assets/images/background_leaves.png);
+    background-repeat: no-repeat;
+    background-size: 120%, 150%;
+    background-position-x: 0px, 100%;
+    background-position-y: top, 120px;
+  }
+  header h1 {
+    font-size: 32px;
+  }
+
+  header p {
+    display: none;
+  }
+  #aboutus {
+    padding: 50px 0px;
+  }
+  #aboutus .aboutus_heading {
+    border-right: 0px solid #a67449;
+    padding: 0px 0 0 25px;
+  }
+  #aboutus .aboutus_heading > h2 {
+    font-size: 24px;
+    width: 100%;
+  }
+  #aboutus .aboutus_text > p {
+    text-align: center;
+  }
+  #aboutus .aboutus_heading {
+    padding: 0px 0px 0px 25px;
+  }
+  #invitations_cont {
+    padding: 35px;
+    margin: 0 -35px;
+  }
+  #invitations_cont h2 {
+    font-size: 24px;
+    margin: 0 0 50px 0;
+  }
+  .invites {
+    margin-bottom: 50px;
+  }
+  .invites .invite_descp > p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .invites .invite_img > img {
+    max-width: 65%;
+    margin-bottom: 20px;
+  }
+  .invite_img .carousel_images img {
+    max-width: 65% !important;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .headerimg {
+    max-width: 150%;
+    position: relative;
+    left: -70px;
+    width: revert;
+  }
 }

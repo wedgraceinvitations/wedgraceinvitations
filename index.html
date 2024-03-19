@@ -38,12 +38,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <link rel="stylesheet" href="./styles.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <style>
       @font-face {
@@ -52,8 +57,8 @@
       }
       @font-face {
         font-family: "Cinzel Decorative";
-        
-        src:url("./assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf");
+
+        src: url("./assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf");
       }
 
       @font-face {
@@ -77,8 +82,7 @@
             <img
               src="./assets/images/Group 1.png"
               alt="Los Angeles"
-              class="d-block"
-              style="width: 100%"
+              class="d-block headerimg"
             />
             <div class="carousel-caption">
               <h1>WedGrace <br />INVITATIONS</h1>
@@ -92,8 +96,7 @@
             <img
               src="assets/images/Group 2.png"
               alt="Chicago"
-              class="d-block"
-              style="width: 100%"
+              class="d-block headerimg"
             />
             <div class="carousel-caption">
               <h1>WedGrace <br />INVITATIONS</h1>
@@ -107,33 +110,753 @@
       </div>
     </header>
     <main>
+      <a
+        id="wa_button"
+        href="https://api.whatsapp.com/send?phone=916284996592"
+        target="_blank"
+      >
+        <img src="./assets/images/WhatsApp_icon.png" alt="whatsapp link"
+      /></a>
       <div id="aboutus">
         <div class="row">
-          <div class="col-sm-3 aboutus_heading d-flex justify_content-center align-items-center">
+          <div
+            class="col-sm-3 aboutus_heading d-flex justify_content-center align-items-center"
+          >
             <h2>About Us</h2>
           </div>
-          <div class="col-sm-9 aboutus_text d-flex justify_content-center align-items-center">
-            <p>Welcome to WedGrace Invitations, where we bring your wedding dreams to life through meticulously crafted, personalized wedding cards. Our commitment is to turn your special day into a work of art, reflecting your unique journey and celebrating your love story.</p>
+          <div
+            class="col-sm-9 aboutus_text d-flex justify_content-center align-items-center"
+          >
+            <p>
+              Welcome to WedGrace Invitations, where we bring your wedding
+              dreams to life through meticulously crafted, personalized wedding
+              cards. Our commitment is to turn your special day into a work of
+              art, reflecting your unique journey and celebrating your love
+              story.
+            </p>
           </div>
         </div>
       </div>
+
       <div id="invitations_cont">
-        <!-- Categories -->
-        <div id="invitations_variety_cont" class="d-flex flex-row justify-content-center align-items-center">
-          <div class="invitescat" id="invitecat_1">
-            Floral
-          </div>
-          <div class="invitescat" id="invitecat_2">
-            Traditional
-          </div>
-          <div class="invitescat" id="invitecat_3">
-            Modern
-          </div>
+        <div class="container d-flex flex-row justify-content-center">
+          <!-- Categories -->
+          <!-- <ul class="nav nav-pills" >
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="pill" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="pill" href="#menu1">Menu 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="pill" href="#menu2">Menu 2</a>
+            </li>
+          </ul> -->
+          <ul
+            class="invitations_variety_cont tab"
+            class="d-flex flex-row justify-content-center align-items-center"
+            style="overflow-x: scroll; padding: 10px; flex-wrap: nowrap"
+          >
+            <li style="min-width: 145px">
+              <button
+                class="invitescat tablinks"
+                data-toggle="pill"
+                id="defaultTab"
+                onclick="openInvites(event, 'invitecat_BnG')"
+              >
+                Couple Invites
+              </button>
+            </li>
+            <li>
+              <button
+                class="invitescat tablinks"
+                data-toggle="pill"
+                onclick="openInvites(event, 'invitecat_floral')"
+              >
+                Floral
+              </button>
+            </li>
+            <li>
+              <button
+                class="invitescat tablinks"
+                data-toggle="pill"
+                onclick="openInvites(event, 'invitecat_trad')"
+            
+              >
+                Traditional
+              </button>
+            </li>
+            <li>
+              <button
+                class="invitescat tablinks"
+                data-toggle="pill"
+                onclick="openInvites(event, 'invitecat_modern')"
+              >
+                Modern
+              </button>
+            </li>
+          </ul>
         </div>
+
         <!-- end -->
         <!-- heading -->
-        <h2>Explore Elegant Invitations <br>For Your Big Day</h2>
+        <h2>Explore Elegant Invitations <br />For Your Big Day</h2>
+        <div>
+          <!-- next tab - BnG -->
+          <div id="invitecat_BnG" class="tabcontent">
+            <div class="row invites flex-wrap">
+              <div class="col-md-4 invite_img d-flex justify-content-center">
+                <!-- Carousel -->
+                <div
+                  id="demo"
+                  class="carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="5000"
+                >
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner carousel_images">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/images/Anand_Karaj_1(3).png"
+                        alt="Los Angeles"
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Anand_Karaj_1.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Anand_Karaj_1(2).png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #164c72">Eternal Azure</h3>
+                <p style="color: #164c72">
+                  The blue theme in an Anand Karaj wedding holds profound
+                  significance, symbolizing spiritual depth and eternal
+                  devotion. Representing the soul's timeless connection with the
+                  divine, blue evokes serenity and fidelity, enriching the
+                  ceremony with a sense of tranquility and reverence.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #164c72">
+                  Get Invite
+                </button> -->
+              </div>
+            </div>
+
+            <div class="row invites flex-wrap-reverse">
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #ab254d">Enchanting Blooms</h3>
+                <p style="color: #a12348">
+                  The pink theme in an Anand Karaj wedding symbolizes love and
+                  spiritual devotion, inviting guests to witness the couple's
+                  profound bond and affection under the divine guidance of
+                  Waheguru.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #a12348">
+                  Get Invite
+                </button> -->
+              </div>
+              <div class="col-md-4 invite_img">
+                <!-- Carousel -->
+                <div
+                  id="demo"
+                  class="carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="5000"
+                >
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner carousel_images">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/images/Sikh_Wedding.png"
+                        alt="Los Angeles"
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Sikh_Wedding_2.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row invites">
+              <div class="col-md-4 invite_img">
+                <img
+                  src="./assets/images/White_n_green.png"
+                  alt="Lavender Floral Wedding Invitation"
+                />
+              </div>
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #5d846a">Everlasting Elegance</h3>
+                <p style="color: #5d846a">
+                  The white and light green theme of wedding radiates the
+                  essence of matrimonial bliss. Together, these hues infuse our
+                  wedding invitation with a sense of divine grace and promise,
+                  inviting you to share in the celebration of our faith, hope,
+                  and the enduring joy of our union.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #445038">
+                  Get Invite
+                </button> -->
+              </div>
+            </div>
+
+            <div class="row invites flex-wrap-reverse">
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #d24c77">Pastel Promise</h3>
+                <p style="color: #d24c77">
+                  The light pink theme and flowers in a wedding invitation
+                  symbolize tender love and romance. Light pink embodies
+                  affection and warmth, setting a tone of intimacy and
+                  sweetness. In just a glance, the invitation conveys a promise
+                  of a beautiful journey ahead, filled with love, joy, and
+                  cherished memories amidst the delicate hues of pink and the
+                  timeless beauty of nature's blooms.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #d24c77">
+                  Get Invite
+                </button> -->
+              </div>
+              <div class="col-md-4 invite_img">
+                <img
+                  src="./assets/images/Floral_smith and Jane.png"
+                  alt="Lavender Floral Wedding Invitation"
+                />
+              </div>
+            </div>
+
+            <div class="row invites">
+              <div class="col-md-4 invite_img">
+                <img
+                  src="./assets/images/Floral_Emily and Kevin.png"
+                  alt="Lavender Floral Wedding Invitation"
+                />
+              </div>
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #8b353a">Peach Perfection</h3>
+                <p style="color: #8b353a">
+                  The light peach and pink theme, interwoven with delicate
+                  blossoms, enriches the wedding invitation with deep
+                  significance. This elegant fusion of colors and blooms extends
+                  a heartfelt invitation, inviting loved ones to celebrate the
+                  couple's journey—a testament to enduring love, grace, and
+                  unity.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #8b353a">
+                  Get Invite
+                </button> -->
+              </div>
+            </div>
+
+            <div class="row invites flex-wrap-reverse">
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #3f2935">Tranquil Ties</h3>
+                <p style="color: #3f2935">
+                  The symbolism of light pink roses and blue flowers in a
+                  wedding invitation beautifully encapsulates the essence of
+                  love's tender embrace and the promise of eternal devotion.
+                  Weddings, cherished celebrations of unity and commitment,
+                  become even more special as these floral elements adorn
+                  invitations, inviting loved ones to witness and partake in the
+                  couple's journey of everlasting love and happiness.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #a36162">
+                  Get Invite
+                </button> -->
+              </div>
+              <div class="col-md-4 invite_img">
+                <img
+                  src="./assets/images/Floral invite - Anne & Michael.png"
+                  alt="Lavender Floral Wedding Invitation"
+                />
+              </div>
+            </div>
+
+            <div class="row invites">
+              <div class="col-md-4 invite_img">
+                <img
+                  src="./assets/images/Floral_smith and Jane 2.png"
+                  alt="Lavender Floral Wedding Invitation"
+                />
+              </div>
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #996b5f">Unified Promise</h3>
+                <p style="color: #996b5f">
+                  Amidst soft hues and delicate blooms, the wedding invitation
+                  captures the essence of unity. Radiating warmth and
+                  tenderness, it symbolizes the merging of separate lives into
+                  one shared journey. Their union, depicted in elegant
+                  simplicity, speaks volumes of profound commitment and
+                  unwavering devotion. This invitation extends a heartfelt
+                  welcome to witness the sacred bond, inviting loved ones to
+                  celebrate the beauty of love, promising a lifetime of shared
+                  dreams, joy, and cherished memories.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #ad8676">
+                  Get Invite
+                </button> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- next tab - floral  -->
+          <div id="invitecat_floral" class="tabcontent">
+            <div class="row invites flex-wrap">
+              <div class="col-md-4 invite_img">
+                <!-- Carousel -->
+                <div
+                  class="carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="5000"
+                >
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner carousel_images">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/images/Peter_Anna_1(2).png"
+                        alt="Los Angeles"
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Peter_Anna_1.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #8864a9">Lavender Love</h3>
+                <p style="color: #8864a9">
+                  Elegantly adorned in a palette of lavender, our wedding
+                  invitation features a captivating floral ring in shades of
+                  purple and violet that encapsulates the essence of love and
+                  commitment. Delicate and refined, the design reflects the
+                  dreamy ambiance of the occasion, promising an evening filled
+                  with romance and enchantment. Your presence is requested to
+                  grace this celebration with the warmth of your company, as we
+                  embark on a journey of love amidst the ethereal beauty of
+                  lavender.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #8864a9">
+                  Get Invite
+                </button> -->
+              </div>
+            </div>
+
+            <div class="row invites flex-wrap-reverse">
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #133e59">Sapphire Serenade</h3>
+                <p style="color: #0f2e41">
+                  Blue flowers surrounding a blue ring with the couple's names
+                  symbolize peace, stability, and eternal commitment in a
+                  wedding invitation. It reflects the couple's bond and invites
+                  celebration of their union.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #133e59">
+                  Get Invite
+                </button> -->
+              </div>
+              <div class="col-md-4 invite_img">
+                <!-- Carousel -->
+                <div
+                  id="demo"
+                  class="carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="5000"
+                >
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner carousel_images">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/images/Blue_Floral_invite_2.png"
+                        alt="Los Angeles"
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Blue_Floral_invite.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row invites flex-wrap">
+              <div class="col-md-4 invite_img">
+                <!-- Carousel -->
+                <div
+                  id="demo"
+                  class="carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="5000"
+                >
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner carousel_images">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/images/Diksha_Rishabh_3.png"
+                        alt="Los Angeles"
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Diksha_Rishabh.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Diksha_Rishabh_2.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #2d5579">Teal Trellis</h3>
+                <p style="color: #2d5579">
+                  The light teal leaves framing the wedding invitation symbolize
+                  harmony and renewal. Combining the serenity of blue with the
+                  vibrancy of green, they represent the couple's journey of
+                  flourishing love and fresh beginnings, inviting guests to
+                  celebrate their enduring commitment.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #2d5579">
+                  Get Invite
+                </button> -->
+              </div>
+            </div>
+
+            <div class="row invites flex-wrap-reverse">
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #2c530e">Emerald Glitter Bliss</h3>
+                <p style="color: #2c530e">
+                  Embracing green and light mustard leaves delicately
+                  embellished with glitter, this invitation celebrates growth
+                  and joy. Against a light green backdrop, it symbolizes renewal
+                  and harmony, inviting guests to witness the couple's enduring
+                  commitment. The intricate design signifies the vibrant journey
+                  of love and promises a union filled with beauty, celebration,
+                  and the sparkle of shared dreams.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #2c530e">
+                  Get Invite
+                </button> -->
+              </div>
+              <div class="col-md-4 invite_img">
+                <!-- Carousel -->
+                <div
+                  id="demo"
+                  class="carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="5000"
+                >
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner carousel_images">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/images/Modern_invite_4(2).png"
+                        alt="Los Angeles"
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Modern_invite_4.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- next tab - traditional -->
+          <div id="invitecat_trad" class="tabcontent">
+            <div class="row invites flex-wrap">
+              <div class="col-md-4 invite_img">
+                <!-- Carousel -->
+                <div
+                  id="demo"
+                  class="carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="5000"
+                >
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner carousel_images">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/images/Traditional_invite_1(2).png"
+                        alt="Los Angeles"
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Traditional_invite_1.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #1f5376">Minimalist Elegance</h3>
+                <p style="color: #1f5376">
+                  A minimalist and sophisticated traditional Indian wedding
+                  invitation, infused with a modern twist, epitomizes
+                  understated elegance. With subtle adornments, and a refined
+                  color scheme, it exudes contemporary charm while preserving
+                  cultural heritage. Its sleek typography and innovative design
+                  elements add a touch of sophistication, promising a wedding
+                  celebration that seamlessly blends tradition with modernit
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #1f5376">
+                  Get Invite
+                </button> -->
+              </div>
+            </div>
+
+            <div class="row invites flex-wrap-reverse">
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #095064">Contemporary Tradition</h3>
+                <p style="color: #095064">
+                  A traditional Indian Punjabi wedding card, with a dark blue
+                  theme, exudes elegance and cultural richness. Symbolizing
+                  loyalty and auspicious beginnings, it features intricate
+                  designs and motifs, inviting guests to celebrate amidst
+                  tradition and reverence.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #095064">
+                  Get Invite
+                </button> -->
+              </div>
+              <div class="col-md-4 invite_img">
+                <img
+                  src="./assets/images/Traditional_invite_2.png"
+                  alt="Lavender Floral Wedding Invitation"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- next tab - modern -->
+          <div id="invitecat_modern" class="tabcontent">
+            <div class="row invites flex-wrap">
+              <div class="col-md-4 invite_img">
+                <!-- Carousel -->
+                <div
+                  id="demo"
+                  class="carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="5000"
+                >
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner carousel_images">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/images/Save_The_Date_2.png"
+                        alt="Los Angeles"
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Save_The_Date.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #121212">Eternal Bond</h3>
+                <p style="color: #121212">
+                  The Save the Date invitation, featuring a backdrop of a couple
+                  holding hands, serves as a heartfelt invitation to mark
+                  calendars for the upcoming wedding celebration. This symbolic
+                  image of unity invites loved ones to share in the anticipation
+                  of the couple's joyous union.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #121212">
+                  Get Invite
+                </button> -->
+              </div>
+            </div>
+
+            <div class="row invites flex-wrap-reverse">
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #6f4e34">Golden Knot</h3>
+                <p style="color: #6f4e34">
+                  With a golden theme and the couple's initials nestled within a
+                  delicate floral ring, the wedding invitation exudes timeless
+                  elegance and romance. Symbolizing prosperity and everlasting
+                  love, it extends a heartfelt invitation to loved ones to
+                  partake in the joyous celebration of the couple's union,
+                  promising an event filled with beauty, love, and cherished
+                  memories.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #6f4e34">
+                  Get Invite
+                </button> -->
+              </div>
+              <div class="col-md-4 invite_img">
+                <!-- Carousel -->
+                <div
+                  id="demo"
+                  class="carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="5000"
+                >
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner carousel_images">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/images/Modern_invite_3(2).png"
+                        alt="Los Angeles"
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Modern_invite_3.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row invites flex-wrap">
+              <div class="col-md-4 invite_img">
+                <!-- Carousel -->
+                <div
+                  id="demo"
+                  class="carousel-fade"
+                  data-bs-ride="carousel"
+                  data-bs-interval="5000"
+                >
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner carousel_images">
+                    <div class="carousel-item active">
+                      <img
+                        src="./assets/images/Modern_invite_1(2).png"
+                        alt="Los Angeles"
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./assets/images/Modern_invite_1.png"
+                        alt=""
+                        class="d-block"
+                        style="max-width: 280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 invite_descp">
+                <h3 style="color: #1d1d1d">Golden Twilight</h3>
+                <p style="color: #1d1d1d">
+                  The wedding invitation, with golden leaves on a black
+                  background, exudes elegance and luxury. Symbolizing prosperity
+                  and new beginnings, it invites guests to celebrate the
+                  couple's union in style and sophistication.
+                </p>
+                <!-- <button class="getInviteBtn" style="background-color: #1d1d1d">
+                  Get Invite
+                </button> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- end invites -->
+        </div>
       </div>
     </main>
+    <footer>
+      <h3>Get Your Invite Today!</h3>
+      <p style="font-family: Helvetica">Contact - 6284996592</p>
+    </footer>
   </body>
+  <script>
+    document.getElementById('defaultTab').click();
+    function openInvites(evt, invName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" activetab", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(invName).style.display = "block";
+  evt.currentTarget.className += " activetab";
+}
+  </script>
 </html>
