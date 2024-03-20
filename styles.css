@@ -53,7 +53,7 @@ main {
   /* border: 1px solid red; */
   padding: 50px 120px;
   margin: 0 -120px;
-  background-image: url("./assets/images/hands_2.png");
+  background-image: url("./assets/images/hands_2.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
