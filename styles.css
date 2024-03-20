@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Kaisei+Decol:wght@700&display=swap");
-header h1 {
+header h1, header h2 {
   font-family: Cinzel;
   font-weight: 500;
   font-size: 3.5em;
@@ -230,7 +230,7 @@ footer {
     background-position-x: 0px, 100%;
     background-position-y: top, 120px;
   }
-  header h1 {
+  header h1, header h2 {
     font-size: 32px;
   }
 
