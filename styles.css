@@ -15,7 +15,7 @@ header p {
 }
 main {
   padding: 0 120px;
-  background-image: url("./assets/images/background_leaves.png");
+  background-image: url("./assets/images/background_leaves.webp");
   background-size: contain;
   background-repeat: no-repeat;
 }
