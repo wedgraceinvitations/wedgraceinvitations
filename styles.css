@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Kaisei+Decol:wght@700&display=swap");
-header h1, header h2 {
+header h1,
+header h2 {
   font-family: Cinzel;
   font-weight: 500;
   font-size: 3.5em;
@@ -15,7 +16,7 @@ header p {
 }
 main {
   padding: 0 120px;
-  background-image: url("./assets/images/background_leaves.webp");
+  background-image: url("./assets/images/background_leaves.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -53,7 +54,7 @@ main {
   /* border: 1px solid red; */
   padding: 50px 120px;
   margin: 0 -120px;
-  background-image: url("./assets/images/hands_2.webp");
+  background-image: url("./assets/images/hands_2.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -148,13 +149,18 @@ button.invitescat:hover {
   font-weight: 400;
   line-height: normal;
 }
-.invites .invite_descp > p {
+
+.invites .invite_descp .price,
+.invites .invite_descp .para {
+  text-align: left;
+}
+.invites .invite_descp .para {
   color: #322766;
-  font-family: Cormorant Garamond;
-  font-size: 21px;
+  font-family: "Cormorant Garamond";
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 37px; /* 176.19% */
+  line-height: 32px; /* 176.19% */
 }
 .invites .invite_descp > .getInviteBtn {
   background-color: #4b487b;
@@ -178,6 +184,10 @@ footer {
     background-repeat: no-repeat;
     background-position-x: center;
   }
+  header h1,
+  header h2 {
+    font-size: 38px;
+  }
 
   #aboutus .aboutus_heading > h2 {
     font-size: 28px;
@@ -198,7 +208,11 @@ footer {
   }
   .invitations_variety_cont {
     padding: 0px 35px;
-    overflow-x:scroll;
+    overflow-x: scroll;
+  }
+  .invites .invite_descp .price,
+  .invites .invite_descp .para {
+    text-align: center;
   }
   button.invitescat {
     /* border: 1px solid blue; */
@@ -230,7 +244,8 @@ footer {
     background-position-x: 0px, 100%;
     background-position-y: top, 120px;
   }
-  header h1, header h2 {
+  header h1,
+  header h2 {
     font-size: 32px;
   }
 
@@ -265,11 +280,7 @@ footer {
   .invites {
     margin-bottom: 50px;
   }
-  .invites .invite_descp > p {
-    text-align: center;
-    font-size: 18px;
-    line-height: 28px;
-  }
+
   .invites .invite_img > img {
     max-width: 65%;
     margin-bottom: 20px;
@@ -280,11 +291,16 @@ footer {
     margin-bottom: 20px;
   }
 }
+
 @media only screen and (max-width: 400px) {
   .headerimg {
     max-width: 150%;
     position: relative;
     left: -70px;
     width: revert;
+  }
+  header h1,
+  header h2 {
+    font-size: 26px;
   }
 }
